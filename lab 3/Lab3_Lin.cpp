@@ -5,6 +5,7 @@ Lab 3: Numerical variables
 */
 
 #include <iostream>
+#include <iomanip>
 using namespace std;
 int main(){
     cout<<"\n --- example 1: numerical variables ---"<<endl;
@@ -16,10 +17,10 @@ int main(){
     cout<<"THe float data type = "<<number2<<endl;
 
     cout<<"\n --- example 2: constant variables ---"<<endl;
-    number = 23.65
+    number = 23.65;
     cout<<"The update number = "<<number<<endl;
     const float EXP = 2.718;
-    cout<<"THe value of EXP = "<EXP<<endl;
+    cout<<"THe value of EXP = "<<EXP<<endl;
 
     cout<<"\n --- example 3: calculate the height of a falling object ---"<<endl;
     const float GRAVITY = 9.8;
@@ -27,19 +28,27 @@ int main(){
     cout<<"Enter the fallling time: ";
     cin>>time;
     height = 0.5*GRAVITY*time*time;
-    cout<<"The height of a falling object at "<<time<<" is "<<hight<<" meters."<<endl;
+    cout<<"The height of a falling object at "<<time<<" is "<<height<<" meters."<<endl;
 
     cout<<"\n --- example 4: calculate the circumference of a circle ---"<<endl;
     const float PI = 3.14159;
-    float circumference = 0, radius = 0:
+    float circumference = 0, radius = 0;
     cout<<"Enter a radius: ";
     cin>>radius;
-    Circumference = 2*radius*PI;
+    circumference = 2*radius*PI;
     cout<<"The circumference is = "<<circumference<<endl;
 
     cout<<"\n --- Exercise ---"<<endl;
-    int r = 0
-
+    int r = 0;
+    float area = 0;
+    float volume = 0;
+    cout<<"Enter the radius of the circle and sphere: ";
+    cin>> r;
+    area = PI*r*r;
+    volume = (4/3.0)*PI*r*r*r;
+    cout<<fixed<<setprecision(1);
+    cout<<"The area of the circle is "<<area<<endl;
+    cout<<"The volume of the sphere is "<<volume<<endl;
 
     return 0;
 }
