@@ -75,7 +75,34 @@ int main(){
     int never = username.find("NEVER");
     cout<<"Index of NEVER = "<<never<<endl;
     
+    cout<<"\n --- example 10: combinate method ---"<<endl;
+    // add string m in username starting 123
+    cout<<username<<endl;
+    cout<<m<<endl;
+    // find the inedx for 123
+    int index123 = username.find("123");
+    // add value of string m before from index123
+    username.insert(index123, m);
+    cout<<username<<endl;
 
+    cout<<"\n --- practice exam 1 ---"<<endl;
+    string password = "peterpan123";
+    int a = password.length(); // a = 11
+    int b = a - 2; // b = 9 character of 2
+    password.replace(b,3,"NONE");
+    cout<<password<<endl;
+
+    cout<<"\n --- Exercise ---"<<endl;
+    string new_word;
+    cout<<"Enter a word: ";
+    cin>>new_word;
+    cout<<"The fourth character of word = "<<new_word[3]<<endl;
+    int num_new_word = new_word.length();
+    cout<<"The length of the word is:"<<num_new_word<<" characters"<<endl;
+    new_word.replace(1,3,"-- $ --");
+    cout<<"After replacement: "<<new_word<<endl;
+    new_word.erase(new_word.length()-2,2);
+    cout<<"After removing two characters from the end: "<<new_word<<endl;
 
     return 0;
 }
