@@ -89,6 +89,100 @@ int main(){
     //print result
     cout<<wavelength<<" nm emits "<<emittedlight<<" light"<<endl;
 
+    cout<<"\n --- example 5: conditional operator ---"<<endl;
+    // conditional operator: three operands --> conition ? expression1 (true) : expression2 (false)
+    /*
+    (example 3)
+    if(n%2 == 0){
+        cout<<n<<" is an EVEN number"<<endl;
+    }
+    else{
+        cout<<n<<" is an ODD number"<<endl;
+    }
+    */
 
-    return 0;
+    cout<<n<<(n%2 == 0 ? " is an EVEN number" : " is an ODD number")<<endl;
+
+    cout<<"\n --- example 6: conditional operator ---"<<endl;
+    // check if n is greater than 10. if n is greater that 10, set the max value to n.
+    int max = 10;
+    bool checkmax = false;
+    // conditional operands to check if n is greater than max.
+    checkmax = n > max ? true : false;
+
+    // if-else
+    if(n > max){
+        checkmax = true;
+    }
+    else{
+        checkmax = false;
+    }
+
+    // print result
+    cout<<"Is n greater than 10? = "<<checkmax<<endl;
+
+    cout<<"\n --- example 7: nested conditional statement ---"<<endl;
+    //check if a n, is positive (even or odd), negative (even or odd), or zero
+    /*
+    // mutiway statement
+    if(n > 0 && n%2 == 0){
+        cout<<"positive and even number"<<endl;
+    }
+    else if(n > 0 && n%2 != 0){
+        cout<<"positive and odd number"<<endl;
+    }
+    else if(n < 0 && n%2 == 0){
+        cout<<"negative and even number"<<endl;
+    }
+    else if(n < 0 && n%2 != 0){
+        cout<<"negative and odd number"<<endl;
+    }
+    else{
+        cout<<"zero"<<endl;
+    }
+    */
+   if (n > 0){
+    if(n%2 == 0){
+        cout<<"positive and even number"<<endl;
+    }
+    else{
+        cout<<"positive and odd number"<<endl;
+    }
+    
+   }
+   else if(n < 0){
+    if(n%2 == 0){
+
+        cout<<"negative and even number"<<endl;
+    }
+    else{
+        cout<<"negative and odd number"<<endl;
+    }
+   }
+   else{
+    cout<<"zero"<<endl;
+   }
+
+   cout<<"\n --- Exercise ---"<<endl;
+   float weight = 0;
+   float cost = 0;
+   cout<<"Enter package weight in pounds = ";
+   cin>>weight;
+   if(weight <= 2 && weight > 0){
+    cost = 5.00;
+   }
+   else if(weight <= 5 && weight > 2){
+    cost = 8.20;
+   }
+   else if(weight <= 10 && weight > 5){
+    cost = 10.25;
+   }
+   else if(weight > 10){
+    cost = 12.50;
+   }
+   else{
+    cost = 0;
+   }
+   cout<<"A package weight of "<<weight<<" pounds the cost is $"<<cost<<endl;
+   return 0;
 }
