@@ -97,5 +97,6 @@ int main(){
     for(start; start <= 30; start +=4){
         cout<<start<<endl;
     }
+    // no
     return 0;
 }
