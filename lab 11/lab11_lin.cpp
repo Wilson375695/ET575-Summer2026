@@ -62,18 +62,18 @@ int main() {
 
     cout<<"\n --- example 4: loop with a coditional statement ---"<<endl;
     //declare variables
-    int count = 0;
-    int i = 10;
+    int counts = 0;
+    int ip = 10;
 
-    while(i>5){
-        i--;
-        if(i%2 == 0){
-            count += i;
+    while(ip>5){
+        ip--;
+        if(ip%2 == 0){
+            counts += ip;
             continue;
         }
-        count -= 3;
+        counts -= 3;
     }
-    cout<<"Final count is = "<<count<<endl;
+    cout<<"Final count is = "<<counts<<endl;
     /*
     table to ananyze the flow of a loop with conditional statement 
     loop iteration  | While(i>5) | i-- | if (i%2 == 0) | count += i | count -= 3 
@@ -84,6 +84,29 @@ int main() {
     5 |While(6>5) True| 6-1=5 = i|if(5%2==0) False |skipped | count = 8-3 = 5
     6 |While(5>5) False| 
     */
+
+    cout<<"\n --- Exercise 1 ---"<<endl;
+    int sum=0, count=0;
+    for (int n = 20; n> 0; n-=2){
+            if (n%3 ==0){
+                count++;
+                continue;
+            }
+            sum += n;
+    }
+    cout<<"The sum is: "<<sum<<endl<<"The count is: "<<count<<endl;
+
+    cout<<"\n --- Exercise 2 ---"<<endl;
+    int i=0, add=0;
+    while(i<=10){
+        i++;
+        if(i<5 && i !=2){   
+            cout<<"i = "<<i<<endl;
+        }
+        else{continue;}
+            add +=i;
+        }
+    cout<<"Add = "<<add<<endl;
 
 
     return 0;
