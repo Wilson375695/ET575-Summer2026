@@ -92,3 +92,19 @@ int random_neg5_10(){
     srand(time(0));
     return (-5 + rand()%16);
 }
+
+// Exercise A
+// function 1
+int random_num1_100(){
+    return (1 + rand()%100);
+}
+// function 2
+int fall(int time){
+    float gravity = 9.8;
+    float distance = 0.5 * gravity * pow(time, 2);
+    return distance;
+}
+// function 3
+void output(int time, int distance){
+    cout<<"The falling distance in "<<time<<" seconds is "<<distance<<" meters."<<endl;
+}

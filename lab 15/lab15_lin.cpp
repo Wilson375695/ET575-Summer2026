@@ -36,5 +36,11 @@ int main(){
     int r = random_neg5_10();
     cout<<r<<endl;
 
+    cout<<"\n --- Exercise A ---"<<endl;
+    int time = random_num1_100();
+    cout<<time<<endl;
+    float distance = fall(time);
+    cout<<distance<<endl;
+    output(time, distance);
     return 0;
 }
