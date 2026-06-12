@@ -64,8 +64,39 @@ int main(){
     }
 
     cout<<"\n --- Exercise A ---"<<endl;
+    int number = 5;
+    int guess;
+    cout<<"guesses a number between 1 and 10"<<endl;
+    do{
+        cout<<"\n Enter your guess: ";
+        cin>>guess;
+
+        while(guess < 1 || guess > 10){
+        cout<<"Error, Please enter a number between 1 and 10: ";
+        cin>>guess;
+        }
+        if(guess < number){
+            cout<<"Too low"<<endl;
+        }
+        else if(guess > number){
+            cout<<"Too high"<<endl;
+        }
+        else{
+            cout<<"You guess right!"<<endl;
+        }
+    }while(guess != number);
 
     cout<<"\n --- Exercise B ---"<<endl;
-
+    for(int row = 1; row <= Dimension; row++){
+        for(int col = 1; col <= Dimension; col++){
+            if(col>=3&&col<=4 && row<=8&&row>=3 || col>=5&&col<=6 && row<=10&&row>=7 || col>=7&&col<=8 && row<=8&&row>=3){
+                cout<<" % ";
+            }
+            else{
+                cout<<" . ";
+            }
+        }
+        cout<<endl;
+    }
     return 0;
 }
