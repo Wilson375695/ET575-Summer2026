@@ -74,5 +74,51 @@ int areasquare(int side){
 }
 
 void printresult(int area){
-    
+    cout<<"The area of a square is "<<area<<endl;
+    return;
+}
+// exmaple 7: function calling function
+// function 1: returns the sum of two numbers
+int addition(int a, int b){
+    return a+b;
+}
+// function 2: return the triple of the sum of wo numbers
+int tripleaddition(){
+    return 3*(addition(2,3)); // function calling function
+}
+
+// Exercise
+// function 1
+int collectnumber(){
+    int num;
+    do {
+        cout<<"Enter a number between 1 and 10: ";
+        cin>>num;
+        if(num < 1 || num > 10){
+            cout<<"Error, Try again!"<<endl;
+        }
+    }while (num < 1 || num > 10);
+    return num;
+}
+// function 2
+void printnum(int num){
+    cout<<"Number for "<<num<<" to 15: ";
+    for(int i = num; i <= 15; i++){
+        cout<<i<<" ";
+    }
+    cout<<endl;
+}
+// function 3
+int notnum(int num){
+    int count = 0;
+    for(int i = num; i <= 15; i++){
+        if(i%3 != 0){
+            count++;
+        }
+    }
+    return count;
+}
+// function 4
+void result(int num, int count){
+    cout<<"From "<<num<<" up to 15, there are "<<count<<" number/s that are not multiplied by 3."<<endl;
 }

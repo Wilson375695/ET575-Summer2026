@@ -35,5 +35,15 @@ int main(){
     int side = positivenumber();
     int asquare = areasquare(side);
     printresult(asquare);
+
+    cout<<"\n --- example 7: function calling function ---"<<endl;
+    cout<<tripleaddition()<<endl;
+    
+    cout<<"\n --- Exercise ---"<<endl;
+    int number = collectnumber();
+    printnum(number);
+    int results = notnum(number);
+    result(number, results);
+
     return 0;
 }
