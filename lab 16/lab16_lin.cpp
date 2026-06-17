@@ -6,6 +6,8 @@ Lab 16: intro array
 
 #include<iostream>
 #include "lab16_function_lin.cpp"
+#include <ctime>
+#include <cstdlib>
 using namespace std;
 
 int main(){
@@ -29,5 +31,30 @@ int main(){
     c(&something);
     a(something);
 
+    cout<<"\n --- example 3: intro to array ---"<<endl;
+    introarray();
+
+    cout<<"\n --- example 4: print each element in an array ---"<<endl;
+    const int s = 4;
+    int age[s]={0};
+
+    printelements(s, age);
+    updatearray(s,age);
+    printelements(s, age);
+
+    int c = countadult(s, age);
+    cout<<"Adult 21+ = "<<c<<endl;
+
+    cout<<"\n --- Exerice B ---"<<endl;
+    srand(time(0));
+    const int sizes = 10;
+    int numbers[sizes];
+    fill(numbers, sizes);
+    cout<<"Array elements: ";
+    for(int i = 0; i<sizes; i++){
+        cout<<numbers[i]<<" ";
+    }
+    cout<<endl;
+    cout<<"Even numbers = "<<countEven(numbers, sizes)<<endl;
     return 0;
 }
