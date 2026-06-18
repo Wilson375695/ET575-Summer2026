@@ -17,6 +17,14 @@ int main(){
     float n = validatenumber();
     cout<<n<<endl;
 
+    cout<<"\n --- example 3: read file ---"<<endl;
+    iofiles();
 
+    cout<<"\n --- example 4: write file ---"<<endl;
+    writefile();
+
+    cout<<"\n --- example 5: append data into a file"<<endl;
+    string filename = "outputfile.txt";
+    appendfile(filename);
     return 0;
 }
