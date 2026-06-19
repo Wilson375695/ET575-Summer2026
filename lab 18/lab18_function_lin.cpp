@@ -105,3 +105,68 @@ void appendfile(string filename){
 
     fout.close();
 }
+
+// Exercise 1
+// function 1
+double calculator(double num1, double num2){
+    char op;
+    do{
+        cout<<"Enter an operation (+, -, *, /, %): ";
+        cin>>op;
+        if(cin.fail()){
+            cin.clear();
+            cin.ignore(1000, '\n');
+            cout<<"Error! invalid input. Try again.";
+        }
+        else if(op != '+'&&op != '-'&&op != '*'&&op != '/'&&op != '%'){
+            cout<<"Error! invalid operation symbol. Try again.";
+        }
+        else{
+            break;
+        }
+    }while(true);
+    switch(op){
+        case '+': 
+            return num1 + num2;
+        case '-': 
+            return num1 - num2;
+        case '*': 
+            return num1 * num2;
+        case '/': 
+            if(num2 == 0){
+                cout<<"Cannot divide by zero.";
+                return 0;
+            }
+            return num1 / num2;
+        case '%': 
+            if((int)num2 == 0){
+                cout<<"Cannot divide by zero.";
+                return 0;
+            }
+            return (int)num1 % (int)num2;
+    }
+    return 0;
+}
+
+// Exercise 2
+// function 1
+void createfile(){
+    ofstream fout;
+    fout.open("data_user.txt");
+    fout<<"This is my output file - Wilson Lin."<<endl;
+    fout.close();
+}
+// function 2
+void appendfiles(string message){
+    ofstream fout;
+    fout.open("data_user.txt", ios::app);
+    fout<<message<<endl;
+    fout.close();
+}
+// function 3
+void overwritefile(string filename, string text){
+    ofstream fout;
+    fout.open(filename);
+    fout<<text;
+    fout.close();
+}

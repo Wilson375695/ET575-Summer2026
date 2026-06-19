@@ -1,0 +1,2 @@
+This is my output file - Wilson Lin.
+This text was appended to the file.
