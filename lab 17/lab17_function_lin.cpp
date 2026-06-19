@@ -109,5 +109,44 @@ void printavg(int *avg, int sizestudents){
 }
 
 // Lab Exerice A
-
+// function 1
+int findmin(int arr[], int size){
+    int minValue = arr[0];
+    for(int i = 1; i < size; i++){
+        if(arr[i]<minValue){
+            minValue = arr[i];
+        }
+    }
+    return minValue;
+}
 // Lab Exerice B
+// function 1
+const int array_size = 5;
+void populatearray2d(int (&arr)[array_size][array_size]){
+    for(int row = 0; row<array_size; row++){
+        for(int col = 0; col<array_size; col++){
+            arr[row][col] = 1 + rand()%255;
+        }
+    }
+}
+// function 2
+int range2d(int (&arr)[array_size][array_size], int min, int max){
+    int count = 0;
+    for(int row = 0; row<array_size; row++){
+        for(int col = 0; col<array_size; col++){
+            if(arr[row][col] >= min && arr[row][col] <= max){
+                count++;
+            }
+        }
+    }
+    return count;
+}
+// function 3
+void printarray2d(int (&arr)[array_size][array_size]){
+    for(int row = 0; row<array_size; row++){
+        for(int col = 0; col<array_size; col++){
+            cout<<arr[row][col]<<"\t";
+        }
+        cout<<endl;
+    }
+}

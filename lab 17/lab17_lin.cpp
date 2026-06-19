@@ -5,6 +5,8 @@ lab 17, array application
 */
 #include<iostream>
 #include "lab17_function_lin.cpp"
+#include<cstdlib>
+#include<ctime>
 
 using namespace std;
 
@@ -49,6 +51,22 @@ int main(){
     int studentavg[students];
     studentaverage(grades, students, subjects, studentavg);
     printavg( studentavg, students);
+
+    cout<<"\n --- Exerice A ---"<<endl;
+    srand(time(0));
+    int arr[10] = {45, 11, 1, 20, 30, 33, 44, 55, 22, 24};
+    int minNumber = findmin(arr, 10);
+    cout<<"The minimum number is "<<minNumber<<endl;
+
+    cout<<"\n --- Exerice B ---"<<endl;
+    int arraynumber2d[array_size][array_size] = {0};
+    int max = 200;
+    int min = 150;
+    populatearray2d(arraynumber2d);
+    cout<<"Generated 2d array:"<<endl;
+    printarray2d(arraynumber2d);
+    int totalnumber = range2d(arraynumber2d, min, max);
+    cout<<"\nArray has "<<totalnumber<<" number(s) between "<<min<<" and "<<max<<endl;
 
     return 0;
     
